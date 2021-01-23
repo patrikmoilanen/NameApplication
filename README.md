@@ -1,4 +1,6 @@
-# Testi
+# Name Application
+
+Application that reads data from .json file. After reading, the data can be sorted in different ways.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
 
