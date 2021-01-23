@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+<div style = "text-align:center">
+<h1>{{title}}</h1>
+</div>
+
+<button (click)="getTotal()">Total amount</button>
+
+
+<h2>Total amount: {{maara}}</h2>
+
+
+<div style = "text-align: center">
+<div class="container text-center">
+</div>
+<div class="container">
+  <div class="row">
+           <button (click)="byAmount()">Order By Amount</button>
+          <button (click)="byAlpha()">Alphabetical</button>
+    <div class="search-name">
+      <input class="form-control" type="text" name="search" [(ngModel)]="findName" autocomplete="off" placeholder="&#61442;  Start search">
+    </div>
+    <table class="table table-striped; center">
+      <thead>
+ 
+      <tr>
+          
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of list |filter:findName">
+        <td>{{item.name}}</td>
+        <td>{{item.amount}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+<router-outlet> </router-outlet>
